@@ -1,7 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: galan
+ * User: Mario Galan
  * Date: 10/29/13
  * Time: 5:48 PM
  */
@@ -219,7 +218,8 @@ class RestHelper {
         break;
 
       case self::HTTP_METHOD_PATCH:
-        // TODO Not implemented
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
         break;
     }
 
